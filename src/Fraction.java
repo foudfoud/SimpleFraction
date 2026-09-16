@@ -24,4 +24,11 @@ public class Fraction {
     @Override
     public String toString() {
         return "Je suis une fraction.";}
+
+    public double doubleValue() {return (double) numerator / denominator;}
+    public Fraction add(Fraction f) {
+    int num = this.numerator * f.denominator + f.numerator * this.denominator;
+    int den = this.denominator * f.denominator;
+    return new Fraction(num, den);}
+
 }
